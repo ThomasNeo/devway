@@ -1,0 +1,60 @@
+{
+  "schools": [
+    {
+      "id": 1,
+      "name": "RocketCast",
+      "location": "Fortaleza",
+      "cnpj": "22.222.222/0001-22",
+      "students": [
+        {
+          "id": "0",
+          "name": "Thiago Augusto",
+          "year": "3A",
+        },
+        {
+          "id": "1",
+          "name": "Nilson",
+          "year": "3C",
+        },
+        {
+          "id": "2",
+          "name": "Thomas",
+          "year": "2B",
+        },
+        {
+          "id": "3",
+          "name": "Lizinete",
+          "year": "1A",
+        },
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Escolas Santos",
+      "location": "Rio Grande do Sul",
+      "cnpj": "11.111.111/0001-11",
+      "students": [
+        {
+          "id": "0",
+          "name": "Thiago Augusto",
+          "year": "3A",
+        },
+        {
+          "id": "1",
+          "name": "Nilson",
+          "year": "3C",
+        },
+        {
+          "id": "2",
+          "name": "Thomas",
+          "year": "2B",
+        },
+        {
+          "id": "3",
+          "name": "Lizinete",
+          "year": "1A",
+        },
+      ]
+    },
+  ],
+}
