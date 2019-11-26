@@ -21,29 +21,36 @@
   ],
   "students": [
     {
-      "id": "0",
+      "id": 0,
       "name": "Thiago Augusto",
       "year": "3A",
       "school_id": 0,
       "mentor_id": 0
     },
     {
-      "id": "1",
+      "id": 1,
       "name": "Nilson",
       "year": "3C",
       "school_id": 1
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Thomas",
       "year": "2B",
       "school_id": 0
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Liziane",
       "year": "1A",
       "school_id": 0
+    },
+    {
+      "name": "Tereza",
+      "year": "2A",
+      "school_id": 0,
+      "mentor_id": 0,
+      "id": 4
     }
   ],
   "mentors": [
