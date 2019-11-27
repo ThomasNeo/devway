@@ -1,0 +1,3 @@
+{
+  "/mentors/:id/students": "/students?mentor_id=:id"
+}
