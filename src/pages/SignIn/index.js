@@ -25,7 +25,7 @@ export default function SignIn() {
 
   return (
     <>
-      <img src={logo} alt="meetapp" />
+      <strong>DevWay</strong>
 
       <Form schema={schema} onSubmit={handleSubmit}>
         <Input name="email" type="email" placeholder="Seu e-mail" />
@@ -36,7 +36,6 @@ export default function SignIn() {
         />
 
         <button type="submit">{loading ? 'Carregando...' : 'Entrar'}</button>
-        <Link to="/register">Criar conta grátis</Link>
       </Form>
     </>
   );
