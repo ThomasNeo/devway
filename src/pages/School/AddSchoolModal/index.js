@@ -11,7 +11,7 @@ const modalStyle = {
 
 export default function AddSchoolModal() {
   const [name, setName] = useState('');
-  const [location, setLocation] = useState(false);
+  const [location, setLocation] = useState('');
   const [cnpj, setCnpj] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

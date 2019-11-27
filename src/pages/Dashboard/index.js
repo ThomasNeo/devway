@@ -7,11 +7,15 @@ import EditSchoolModal from '../School/EditSchoolModal';
 import AddTechModal from '../Tech/AddTechModal';
 import TechListModal from '../Tech/TechListModal';
 import Button from '../../components/Button';
+import SideNav from '../../components/SideNav';
 
 export default function Dashboard() {
   return (
     <>
-      <SearchBar />
+      <div>
+        <SideNav />
+        <SearchBar />
+      </div>
       <div className="container">
         <School />
         <AddSchoolModal />
