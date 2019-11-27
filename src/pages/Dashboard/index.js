@@ -1,6 +1,5 @@
 import React from 'react';
 
-import SearchBar from '../../components/SearchBar';
 import School from '../School';
 import AddSchoolModal from '../School/AddSchoolModal';
 import EditSchoolModal from '../School/EditSchoolModal';
@@ -14,7 +13,6 @@ export default function Dashboard() {
     <>
       <div>
         <SideNav />
-        <SearchBar />
       </div>
       <div className="container">
         <School />

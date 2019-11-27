@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import SearchBar from '../../components/SearchBar';
 import M from 'materialize-css/dist/js/materialize.min';
 
 import SchoolItem from './SchoolItem';
@@ -34,20 +35,11 @@ export default function School() {
 
   return (
     <>
-      <div className="center-align">
-        <i
-          className="small material-icons tooltipped"
-          data-position="bottom"
-          data-tooltip={`Total de ocorrências: ${schoolSize}`}
-          style={{ color: '#fff' }}
-        >
-          assignment
-        </i>
-      </div>
       <ul
         className="collection with-header"
         style={{ paddingBottom: '30px', backgroundColor: '#fff' }}
       >
+        <SearchBar />
         <li className="collection-header">
           <h4 className="center">Lista de Escolas</h4>
 
