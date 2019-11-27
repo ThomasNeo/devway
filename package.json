@@ -5,6 +5,7 @@
   "dependencies": {
     "@rocketseat/unform": "^1.5.1",
     "axios": "^0.19.0",
+    "concurrently": "^5.0.0",
     "date-fns": "^2.4.1",
     "date-fns-tz": "^1.0.7",
     "history": "^4.9.0",
@@ -30,6 +31,8 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
+    "json-server": "json-server --watch db.json --port 5000 --routes routes.json",
+    "dev": "concurrently \"yarn start\" \"yarn run json-server\"",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"

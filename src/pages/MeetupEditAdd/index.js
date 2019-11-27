@@ -12,7 +12,7 @@ import DateTimeInput from './DateTimeInput';
 import BannerInput from './BannerInput';
 import { Container } from './styles';
 
-const schema = Yup.object().shape({
+/* const schema = Yup.object().shape({
   title: Yup.string().required('Nome é obrigatório'),
   description: Yup.string().required('Descrição é obrigatória'),
   date_and_hour: Yup.date()
@@ -21,9 +21,9 @@ const schema = Yup.object().shape({
   localization: Yup.string().required('Localização é obrigatório'),
   banner_id: Yup.number(),
 });
-
+ */
 export default function MeetupEditAdd({ match }) {
-  const { id } = match.params;
+  /*   const { id } = match.params; */
   const profile = useSelector(state => state.user.profile);
   const [meetup, setMeetup] = useState({});
   const [description, setDescription] = useState('');
@@ -47,7 +47,7 @@ export default function MeetupEditAdd({ match }) {
     }
 
     isEditing();
-  }, [id]) // eslint-disable-line
+  }, [id]); // eslint-disable-line
 
   async function handleSubmit(data) {
     if (id) {
@@ -73,7 +73,7 @@ export default function MeetupEditAdd({ match }) {
 
   return (
     <Container>
-      <Form initialData={meetup} onSubmit={handleSubmit} schema={schema}>
+      <Form initialData={meetup} onSubmit={handleSubmit}>
         <BannerInput name="banner_id" />
         <Input name="title" placeholder="Título do meetup" />
         <Input

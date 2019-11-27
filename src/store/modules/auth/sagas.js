@@ -10,14 +10,20 @@ export function* signIn({ payload }) {
   try {
     const { email, password } = payload;
 
-    const response = yield call(api.post, 'sessions', {
+    /*     const response = yield call(api.post, 'sessions', {
       email,
       password,
     });
+ */
+    // const { token, user } = response.data;
+    const token = '1123123';
+    const user = {
+      id: 0,
+      name: 'Thomas',
+      email: 'thomaslossio@hotmail.com',
+    };
 
-    const { token, user } = response.data;
-
-    api.defaults.headers.Authorization = `Bearer ${token}`;
+    // api.defaults.headers.Authorization = `Bearer ${token}`;
 
     yield put(signInSuccess(token, user));
 

@@ -12,17 +12,10 @@ export default function Dashboard() {
 
   useEffect(() => {
     async function loadMeetups() {
-      const response = await api.get('organizing', {
-        params: { page: 1 },
-      });
+      const response = await api.get('students');
 
       const data = response.data.map(meetup => ({
         ...meetup,
-        dateFormatted: format(
-          parseISO(meetup.date_and_hour),
-          "d 'de' MMMM', às' HH'h'",
-          { locale: pt }
-        ),
       }));
 
       setMeetups(data);
@@ -48,10 +41,9 @@ export default function Dashboard() {
       <List>
         {meetups.map(meetup => (
           <ContentList key={meetup.id} to={`/meetup/detail/${meetup.id}`}>
-            <strong>{meetup.title}</strong>
+            <strong>{meetup.name}</strong>
             <div>
-              <p>{meetup.dateFormatted}</p>{' '}
-              <MdChevronRight size={24} color="#fff" />
+              <p>{meetup.year}</p> <MdChevronRight size={24} color="#fff" />
             </div>
           </ContentList>
         ))}
