@@ -15,8 +15,9 @@ export const Container = styled.div`
     justify-content: space-between;
 
     strong {
-      color: #fff;
+      color: #2c3e50;
       font-size: 32px;
+      text-transform: uppercase;
     }
 
     button {
@@ -24,7 +25,7 @@ export const Container = styled.div`
       padding: 10px 15px;
       width: 150px;
       align-self: flex-end;
-      background: #f94d6a;
+      background: #fbc531;
       color: #fff;
       border: 0;
       border-radius: 4px;
@@ -36,7 +37,7 @@ export const Container = styled.div`
       justify-content: space-between;
 
       &:hover {
-        background: ${darken(0.03, '#f94d6a')};
+        background: ${darken(0.03, '#fbc531')};
       }
     }
   }
@@ -55,11 +56,11 @@ export const ContentList = styled(Link)`
   padding: 20px;
   margin-bottom: 10px;
   height: 62px;
-  background: rgba(0, 0, 0, 0.1);
+  background: #718093;
 
   &:hover {
     cursor: pointer;
-    background: rgba(0, 0, 0, 0.2);
+    background: ${darken(0.03, '#718093')};
   }
 
   strong {
@@ -72,7 +73,7 @@ export const ContentList = styled(Link)`
     align-items: center;
 
     p {
-      color: #999;
+      color: #fff;
       font-weight: 16px;
       margin-right: 20px;
     }

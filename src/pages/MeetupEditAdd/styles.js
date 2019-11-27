@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { darken } from 'polished';
+import { darken, lighten } from 'polished';
 
 export const Container = styled.div`
   max-width: 900px;
@@ -24,12 +24,12 @@ export const Container = styled.div`
       border-radius: 4px;
       height: 44px;
       padding: 0 15px;
-      color: #fff;
+      color: #2c3e50;
       margin: 0 0 10px;
       font-size: 15px;
 
       &::placeholder {
-        color: rgba(255, 255, 255, 0.7);
+        color: ${darken(0.2, '#ccc')};
       }
     }
 
@@ -62,7 +62,7 @@ export const Container = styled.div`
       width: 160px;
       height: 44px;
       align-self: flex-end;
-      background: #f94d6a;
+      background: #fbc531;
       font-weight: bold;
       color: #fff;
       border: 0;
@@ -73,7 +73,7 @@ export const Container = styled.div`
       justify-content: space-between;
 
       &:hover {
-        background: ${darken(0.03, '#f94d6a')};
+        background: ${darken(0.03, '#fbc531')};
       }
     }
   }

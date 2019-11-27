@@ -19,15 +19,12 @@ export default function Header() {
   return (
     <Container>
       <Content>
-        <a href="/dashboard">
-          <img src={logo} alt="Meetapp" />
-        </a>
+        <Link to="/dashboard">DevWay</Link>
 
         <aside>
           <Profile>
             <div>
               <strong>{profile.name}</strong>
-              <Link to="/profile">Meu perfil</Link>
             </div>
           </Profile>
           <button type="button" onClick={handleSignOut}>

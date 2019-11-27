@@ -31,16 +31,16 @@ export default function Dashboard() {
   return (
     <Container>
       <header>
-        <strong>Meus meetups</strong>
+        <strong>Alunos</strong>
 
         <button type="button" onClick={handleNew}>
-          <MdAddCircleOutline size={18} /> Novo meetup
+          <MdAddCircleOutline size={18} /> Novo aluno
         </button>
       </header>
 
       <List>
         {meetups.map(meetup => (
-          <ContentList key={meetup.id} to={`/meetup/detail/${meetup.id}`}>
+          <ContentList key={meetup.id} to="/dashboard">
             <strong>{meetup.name}</strong>
             <div>
               <p>{meetup.year}</p> <MdChevronRight size={24} color="#fff" />
