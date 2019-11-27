@@ -25,69 +25,28 @@ import { Container } from './styles';
 export default function MeetupEditAdd({ match }) {
   /*   const { id } = match.params; */
   const profile = useSelector(state => state.user.profile);
-  const [meetup, setMeetup] = useState({});
-  const [description, setDescription] = useState('');
-
-  useEffect(() => {
-    setDescription(meetup.description);
-  }, [meetup]);
-
-  useEffect(() => {
-    async function isEditing() {
-      if (!id) {
-        return;
-      }
-
-      const response = await api.get(`organizing/${id}`);
-
-      const { data } = response;
-      const date_and_hour = parseISO(data.date_and_hour);
-
-      setMeetup({ ...data, date_and_hour });
-    }
-
-    isEditing();
-  }, [id]); // eslint-disable-line
 
   async function handleSubmit(data) {
-    if (id) {
-      try {
-        await api.put(`meetups/${id}`, data);
-        toast.success('Meetup editado com sucesso!');
-      } catch (err) {
-        toast.error('Algo deu errado, tente novamente mais tarde!');
-      }
-    } else {
-      try {
-        await api.post('meetups', {
-          ...data,
-          user_id: profile.id,
-        });
-        toast.success('Meetup criado com sucesso!');
-      } catch (err) {
-        toast.error('Algo deu errado, tente novamente mais tarde!');
-      }
+    try {
+      await api.post('students', {
+        ...data,
+        school_id: profile.id,
+      });
+      toast.success('Aluno criado com sucesso!');
+    } catch (err) {
+      toast.error('Algo deu errado, tente novamente mais tarde!');
     }
     history.push('/dashboard');
   }
 
   return (
     <Container>
-      <Form initialData={meetup} onSubmit={handleSubmit}>
-        <BannerInput name="banner_id" />
-        <Input name="title" placeholder="Título do meetup" />
-        <Input
-          name="description"
-          multiline
-          placeholder="Descrição completa"
-          value={description}
-          onChange={e => setDescription(e.target.value)}
-        />
-        <DateTimeInput name="date_and_hour" />
-        <Input name="localization" placeholder="Localização" />
+      <Form onSubmit={handleSubmit}>
+        <Input name="name" placeholder="Nome do aluno" />
+        <Input name="year" placeholder="Ano/Turma" />
         <button type="submit">
           {' '}
-          <MdAddCircleOutline size={18} /> Salvar meetup
+          <MdAddCircleOutline size={18} /> Salvar aluno
         </button>
       </Form>
     </Container>
